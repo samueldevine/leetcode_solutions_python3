@@ -1,7 +1,7 @@
 """
 Process:
 Use two pointers, Left and Right
-- Right pointer will scan through the array on each loop. Use index from enumerate()
+- Right pointer will scan through the array on each loop. Implied in for loop
 - Left pointer will indicate where the next unique value should be placed
     Left pointer can also tell us how many unique values we've seen at the end
 - No need to start at 0 index, as that first value is guaranteed to be unique, so start at nums[1::]
@@ -16,7 +16,7 @@ class Solution:
             return len(nums)
 
         left_pointer = 0
-        for index, num in enumerate(nums[1::]):
+        for num in nums[1::]:
             if num != nums[left_pointer]:
                 left_pointer += 1
                 nums[left_pointer] = num
