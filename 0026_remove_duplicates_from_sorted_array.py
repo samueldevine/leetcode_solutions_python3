@@ -1,11 +1,4 @@
-"""
-Process:
-Use two pointers, Left and Right
-- Right pointer will scan through the array on each loop. Implied in for loop
-- Left pointer will indicate where the next unique value should be placed
-    Left pointer can also tell us how many unique values we've seen at the end
-- No need to start at 0 index, as that first value is guaranteed to be unique, so start at nums[1::]
-"""
+from typing import List
 
 
 class Solution:
@@ -25,6 +18,17 @@ class Solution:
 
 
 """
+Process:
+Use two pointers, Left and Right
+- Right pointer will scan through the array on each loop. Implied in for loop
+- Left pointer will indicate where the next unique value should be placed
+    Left pointer can also tell us how many unique values we've seen at the end
+- No need to start at 0 index, as that first value is guaranteed to be unique, so start at nums[1::]
+
+O(n) time to scan through nums
+O(1) space, only need to store pointer variable
+
+
 diagram for example [1, 1, 2]
 
 loop 0
